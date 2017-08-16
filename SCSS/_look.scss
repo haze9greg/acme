@@ -1,0 +1,348 @@
+/****************************
+	BASICS
+*****************************/
+
+body {
+	background: black;
+	line-height: 1.3;
+}
+
+h3 {
+	font-size: 40px;
+	margin-top: 40px;
+	padding: 30px 0;
+	font-family: helvetica;
+	text-shadow: 0 2px 5px black;
+}
+
+h5 {
+	font-size: 30px;
+	margin-top: 10px;
+	padding: 10px 0;
+	font-family: helvetica;
+	text-shadow: 0 2px 5px black;
+}
+
+p {
+	font-family: helvetica;
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.blurbs {
+	padding: 100px 0 200px;
+	&:nth-child(odd) {
+		background: #3c3c3c;
+		color: white;
+		box-shadow: 0 0 10px 10px #3c3c3c;
+	}
+	&:nth-child(even) {
+		background: $color1;
+		color: white;
+		box-shadow: 0 0 10px 10px $color1;
+	}
+}
+
+.frame {
+	box-shadow: 0 5px 15px -2px black;
+	margin: 20px auto;
+	width: 100%;
+}
+
+hr {
+	width: 80%;
+	margin: 50px auto;
+}
+
+
+/****************************
+	NAVBAR
+*****************************/
+
+#top-nav {
+	position: fixed;
+	padding:0;
+	width: 100%;
+	min-height:10px;
+	height: 30px;
+	background: black;
+	border-radius:0;
+	box-shadow: 0 1px 5px black;
+	z-index: 500;
+	div {
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+		a {
+			display: block;
+			height: 30px;
+			padding: 5px;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			color: white;
+			text-align: center;
+			font-size: 18px;
+			font-family: federant;
+			text-decoration: none;
+			border: 1px solid transparent;
+			border-top: none;
+			&:hover {
+				background: #1a1a1a;
+				box-shadow: 0 0 40px 3px black inset;
+				color: $color2;
+				height: 35px;
+				transition: 500ms;
+			}
+			&:focus {
+				background: #1a1a1a;
+				box-shadow: 0 0 40px 3px black inset;
+				color: $color2;
+				height: 35px;
+				border: 1px solid white;
+				border-top: none;
+			}
+		}
+	}
+}
+
+
+/****************************
+	HEADER
+*****************************/
+
+#header {
+	background: linear-gradient($color3, $color1);
+	color: black;
+	height: 160px;
+	padding: 20px;
+	padding-top: 35px;
+	img {
+		float: left;
+		height: 130px;
+		margin-top: -5px;
+		transform: rotate(30deg);
+		padding-right: 20px;
+	}
+	h1 {
+		font-size: 50px;
+		font-family: stencil-std;
+	}
+	h2 {
+		font-size: 20px;
+		font-family: inika, ;
+		color: #e6e6e6;
+	}
+}
+
+.subHeader {
+	font-size: 25px;
+	text-align: center;
+}
+
+
+/****************************
+	SPLASH
+*****************************/
+
+#splash {
+	background-image: url(../images/line-1174803_1920.jpg);
+	width: 100%;
+	height: calc(100vh - 110px);
+	box-shadow: 0 5px 10px black;
+	p {
+		color: white;
+		font-size: 7em;
+		margin: 0 auto;
+		padding-top: 30vh;
+		text-align: center;
+		font-family: chunk, ;
+		text-shadow: 0 0 20px white;
+		animation: splash 5s 1 ease;
+	}
+}
+
+@keyframes splash {
+	0% {
+		transform: scale(0.2);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/****************************
+	ABOUT
+*****************************/
+
+#about {
+	h5 {
+		color: $color3;
+	}
+}
+
+#acme{
+	img {
+		float:left;
+		height: 200px;
+		margin-top: -5px;
+		transform: rotate(30deg);
+		padding-right: 20px;
+	}
+	p{
+		z-index: 100;
+	}
+}
+
+
+/****************************
+	EVENTS
+*****************************/
+
+@-moz-document url-prefix() {
+	fieldset {
+		display: table-cell;
+	}
+}
+
+.table {
+	margin-top:50px;
+	border: 1px solid black;
+	overflow-y: hidden;
+	box-shadow: 0 0 10px black;
+	tbody {
+		tr {
+			td {
+				border-color: black;
+				font-size:18px;
+			}
+			th {
+				font-weight: bold;
+				font-family: federant;
+				background: black;
+				color: $color3;
+				border-color: black;
+				font-size:20px;
+			}
+		}
+	}
+}
+
+
+/****************************
+	SPEAKERS
+*****************************/
+#speakers {
+	a {
+		border-radius: 10px;
+		padding: 10px;
+		background: black;
+		color: white;
+		font-family: helvetica;
+		font-weight: bold;
+		float:left;
+		&:hover, &:focus {
+			color: $color3;
+			transition: 200ms;
+			text-decoration: none;
+		}
+		&:last-child {
+			float: right;
+		}
+	}
+	.panel-title::first-line{
+		font-size:1.3em
+	}
+}
+
+.panel {
+	border: none;
+	box-shadow: 0 5px 10px -2px black;
+	&-title {
+		padding: 10px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	&-body {
+		background: black;
+		height: 270px;
+		font-size: 20px;
+		font-family: helvetica, ;
+	}
+}
+
+
+/****************************
+ LOCALS
+*****************************/
+
+#locals {
+	.row {
+		margin-bottom: 40px;
+	}
+}
+
+
+/****************************
+	FORM
+*****************************/
+
+#tickets {
+	.pricing {
+		margin: 50px 0;
+		height: 350px;
+		border-right: 1px solid grey;
+		border-left: 1px solid grey;
+		text-align: left;
+		h5 {
+			color: $color2;
+		}
+	}
+}
+
+#success_message {
+	display: none;
+}
+
+/****************************
+	CONTACT
+*****************************/
+#mapBig{
+		.frame, #gmap_canvas{
+			width:500px;
+			height:400px;
+		}
+	}
+
+
+/****************************
+	FOOTER
+*****************************/
+
+#footer {
+	height: auto;
+	a {
+		float: left;
+		padding: 10px;
+		margin: 10px;
+		color: $color3;
+		font-weight: bold;
+		border-radius: 5px;
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background: #1a1a1a;
+			transition: 300ms;
+		}
+	}
+	p {
+		padding: 10px;
+		color: white;
+		float: right;
+	}
+}

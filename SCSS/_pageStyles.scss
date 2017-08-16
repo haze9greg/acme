@@ -1,0 +1,137 @@
+
+body {
+	background: white;
+}
+
+#header {
+	background: linear-gradient($color3, $color2);
+	color: black;
+	height: 110px;
+	padding-top: 40px;
+	h1 {
+		font-size: 40px;
+		font-family: stencil-std;
+	}
+	h2 {
+		font-size: 20px;
+		font-family: inika,;
+		color:#e6e6e6;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	margin-top: 40px;
+	font-family: helvetica;
+}
+#nav-wrap{
+	background:black;
+	height:30px;
+#top-nav {
+	position: fixed;
+	width: 100%;body {
+	background: white;
+}
+
+#header {
+	background: linear-gradient($color3, $color2);
+	color: black;
+	height: 110px;
+	padding-top: 40px;
+	h1 {
+		font-size: 40px;
+		font-family: stencil-std;
+	}
+	h2 {
+		font-size: 20px;
+		font-family: inika, ;
+		color: #e6e6e6;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	margin-top: 40px;
+	font-family: helvetica;
+}
+
+/*#nav-wrap {
+	content:'';
+	background: black;
+	height: 30px;
+	#top-nav {
+		position: fixed;
+		width: 100%;
+		background: black;
+		display: flex;
+		flex-flow: row;
+		justify-content: flex-end;
+		box-shadow: 0 1px 5px black;
+		nav {
+			a {
+				display: block;
+				height: 30px;
+				padding: 5px;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				color: white;
+				text-align: center;
+				font-size: 18px;
+				font-family: federant;
+				text-decoration: none;
+				border: 1px solid transparent;
+				border-top: none;
+				&:hover {
+					background: #1a1a1a;
+					box-shadow: 0 0 40px 3px black inset;
+					color: $color3;
+					height: 35px;
+					transition: 500ms;
+				}
+				&:focus {
+					background: #1a1a1a;
+					box-shadow: 0 0 40px 3px black inset;
+					color: $color3;
+					height: 35px;
+					border: 1px solid white;
+					border-top: none;
+				}
+			}
+		}
+	}
+}*/
+
+#splash-img img {
+	width: 100%;
+	height: calc(100vh - 120px);
+	box-shadow: 0 15px 10px 5px black;
+}
+
+.blurbs {
+	padding: 100px 0 200px;
+	&:nth-child(odd) {
+		background: #1a1a1a;
+		color: white;
+		box-shadow: 0 0 10px 10px #1a1a1a;
+	}
+	&:nth-child(even) {
+		background: $color2;
+		color: white;
+		box-shadow: 0 0 10px 10px $color2;
+	}
+}
+
+p {
+	font-family: helvetica;
+}
+	
+
+#footer {
+	p {
+		color: white;
+		float: right;
+	}
+}
+
+
+

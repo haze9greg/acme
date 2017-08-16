@@ -1,0 +1,606 @@
+/***********************
+	IMPORTS
+***********************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*footer fix from "http://cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/"*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+#header {
+  background: red;
+  padding: 10px; }
+
+#content {
+  padding-bottom: 10px;
+  /* Height of the footer element */ }
+
+#footer {
+  background: black;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0; }
+
+/**********************
+    OVERALL
+**********************/
+#ticketButtons {
+  font-size: 30px; }
+
+h4 {
+  display: block;
+  float: left;
+  font-weight: bold;
+  width: 50%;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #e30000;
+  text-shadow: 0 0 1px black;
+  box-shadow: 0 0 20px 2px black inset; }
+  h4:hover {
+    box-shadow: 0 0 50px 10px black inset;
+    transition: 300ms; }
+
+h5 {
+  color: black; }
+
+#gButton {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: black; }
+
+#sButton {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #676767; }
+
+#register {
+  clear: both;
+  width: 500px;
+  margin: 0 auto;
+  background: transparent; }
+
+#form1 {
+  display: block; }
+
+#form2 {
+  display: none; }
+
+#wholeForm {
+  margin: 100px 0;
+  border-radius: 20px;
+  border: 1px solid #e30000;
+  background: #272727;
+  box-shadow: 0 5px 10px -2px black;
+  padding: 20px; }
+  #wholeForm h3 {
+    margin-top: 0px; }
+  #wholeForm textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    color: black;
+    font-family: helvetica; }
+  #wholeForm #checkbox {
+    width: 100%; }
+
+/**********************
+    LABELS/INPUTS
+**********************/
+/*set all elements inside the formbox to be relative to it*/
+.formbox {
+  position: relative;
+  margin-bottom: 20px; }
+
+label,
+input,
+select,
+option,
+span {
+  margin: 5px 0 0 0;
+  font-family: mate;
+  font-size: 20px;
+  width: 300px;
+  padding: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  transition: 300ms;
+  border: 1px solid transparent;
+  color: black; }
+
+.labels {
+  font-family: chunk;
+  color: white; }
+
+.options {
+  height: 20px; }
+
+span {
+  color: #ff0000; }
+
+/*focus state gives the inputs a nice green look*/
+input:focus, select:focus {
+  background: #acffff;
+  width: 320px;
+  transition: 300ms;
+  border: 1px solid #001dff; }
+
+input[type="radio"], input[type="checkbox"] {
+  width: 30px;
+  margin-right: 5px;
+  display: inline-block; }
+
+.chunks {
+  margin: 20px 0; }
+
+#sexy, #stalk {
+  height: 40px; }
+
+input {
+  font-size: 18px; }
+
+#radio {
+  margin-bottom: 20px; }
+
+/**********************
+    SUBMIT
+**********************/
+input[type=submit] {
+  display: block;
+  border-radius: 20px;
+  background: #9a0000;
+  color: white;
+  width: 90px;
+  height: 40px;
+  font-size: 18px;
+  margin: 15px auto 0; }
+
+/*widen the submit button during hover*/
+input[type=submit]:hover {
+  width: 110px;
+  box-shadow: 0 0 10px 2px white;
+  transition: 200ms; }
+
+/*pretty light green active state*/
+input[type=submit]:active {
+  transition: 50ms;
+  box-shadow: 0 0 20px 5px black inset, 0 0 10px white;
+  border: none; }
+
+/**********************
+    MESSAGE
+**********************/
+/*negative message appears below the input field*/
+.message {
+  position: absolute;
+  left: 45%;
+  color: #ffaaaa;
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  font-size: 14px;
+  display: none; }
+
+/*positive message appears beside the input. hapy and green*/
+.message2 {
+  position: absolute;
+  top: 0;
+  left: 95%;
+  margin-left: 10px;
+  background-color: transparent;
+  font-size: 10px;
+  font-family: "kingthings_calligraphica_2Rg", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  font-size: 30px;
+  color: #00ff00;
+  display: none; }
+
+#checkMessage {
+  top: 120px;
+  left: 5%; }
+
+/*******************
+    Media Queries
+*******************/
+/*somewhat started media queries*/
+@media screen and (max-width: 960px) {
+  #wholeForm {
+    margin-top: 100px; }
+    #wholeForm input, #wholeForm select {
+      width: 100%; }
+    #wholeForm input[type="text"], #wholeForm input[type="email"], #wholeForm input[type="tel"] {
+      width: 100%; }
+    #wholeForm #checkMessage {
+      top: 150px; }
+    #wholeForm input[type="radio"], #wholeForm input[type="checkbox"] {
+      width: 30px; }
+    #wholeForm input[type="submit"] {
+      width: 70%; } }
+body {
+  background-color: #eee; }
+
+.form {
+  clear: both; }
+  .form-container {
+    margin: 50px;
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid #d4d4d4;
+    background-color: #fff; }
+
+/***********************
+ STYLES
+***********************/
+/****************************
+	BASICS
+*****************************/
+body {
+  background: black;
+  line-height: 1.3; }
+
+h3 {
+  font-size: 40px;
+  margin-top: 40px;
+  padding: 30px 0;
+  font-family: helvetica;
+  text-shadow: 0 2px 5px black; }
+
+h5 {
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 10px 0;
+  font-family: helvetica;
+  text-shadow: 0 2px 5px black; }
+
+p {
+  font-family: helvetica;
+  font-size: 20px;
+  margin: 10px 0; }
+
+.blurbs {
+  padding: 100px 0 200px; }
+  .blurbs:nth-child(odd) {
+    background: #3c3c3c;
+    color: white;
+    box-shadow: 0 0 10px 10px #3c3c3c; }
+  .blurbs:nth-child(even) {
+    background: #9a0000;
+    color: white;
+    box-shadow: 0 0 10px 10px #9a0000; }
+
+.frame {
+  box-shadow: 0 5px 15px -2px black;
+  margin: 20px auto;
+  width: 100%; }
+
+hr {
+  width: 80%;
+  margin: 50px auto; }
+
+/****************************
+	NAVBAR
+*****************************/
+#top-nav {
+  position: fixed;
+  padding: 0;
+  width: 100%;
+  min-height: 10px;
+  height: 30px;
+  background: black;
+  border-radius: 0;
+  box-shadow: 0 1px 5px black;
+  z-index: 500; }
+  #top-nav div {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end; }
+    #top-nav div a {
+      display: block;
+      height: 30px;
+      padding: 5px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-family: federant;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-top: none; }
+      #top-nav div a:hover {
+        background: #1a1a1a;
+        box-shadow: 0 0 40px 3px black inset;
+        color: #e30000;
+        height: 35px;
+        transition: 500ms; }
+      #top-nav div a:focus {
+        background: #1a1a1a;
+        box-shadow: 0 0 40px 3px black inset;
+        color: #e30000;
+        height: 35px;
+        border: 1px solid white;
+        border-top: none; }
+
+/****************************
+	HEADER
+*****************************/
+#header {
+  background: linear-gradient(#ff0000, #9a0000);
+  color: black;
+  height: 160px;
+  padding: 20px;
+  padding-top: 35px; }
+  #header img {
+    float: left;
+    height: 130px;
+    margin-top: -5px;
+    transform: rotate(30deg);
+    padding-right: 20px; }
+  #header h1 {
+    font-size: 50px;
+    font-family: stencil-std; }
+  #header h2 {
+    font-size: 20px;
+    font-family: inika;
+    color: #e6e6e6; }
+
+.subHeader {
+  font-size: 25px;
+  text-align: center; }
+
+/****************************
+	SPLASH
+*****************************/
+#splash {
+  background-image: url(../images/line-1174803_1920.jpg);
+  width: 100%;
+  height: calc(100vh - 110px);
+  box-shadow: 0 5px 10px black; }
+  #splash p {
+    color: white;
+    font-size: 7em;
+    margin: 0 auto;
+    padding-top: 30vh;
+    text-align: center;
+    font-family: chunk;
+    text-shadow: 0 0 20px white;
+    animation: splash 5s 1 ease; }
+
+@keyframes splash {
+  0% {
+    transform: scale(0.2);
+    opacity: 0; }
+  50% {
+    transform: scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1); } }
+/****************************
+	ABOUT
+*****************************/
+#about h5 {
+  color: #ff0000; }
+
+#acme img {
+  float: left;
+  height: 200px;
+  margin-top: -5px;
+  transform: rotate(30deg);
+  padding-right: 20px; }
+#acme p {
+  z-index: 100; }
+
+/****************************
+	EVENTS
+*****************************/
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell; } }
+.table {
+  margin-top: 50px;
+  border: 1px solid black;
+  overflow-y: hidden;
+  box-shadow: 0 0 10px black; }
+  .table tbody tr td {
+    border-color: black;
+    font-size: 18px; }
+  .table tbody tr th {
+    font-weight: bold;
+    font-family: federant;
+    background: black;
+    color: #ff0000;
+    border-color: black;
+    font-size: 20px; }
+
+/****************************
+	SPEAKERS
+*****************************/
+#speakers a {
+  border-radius: 10px;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-family: helvetica;
+  font-weight: bold;
+  float: left; }
+  #speakers a:hover, #speakers a:focus {
+    color: #ff0000;
+    transition: 200ms;
+    text-decoration: none; }
+  #speakers a:last-child {
+    float: right; }
+#speakers .panel-title::first-line {
+  font-size: 1.3em; }
+
+.panel {
+  border: none;
+  box-shadow: 0 5px 10px -2px black; }
+  .panel-title {
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold; }
+  .panel-body {
+    background: black;
+    height: 270px;
+    font-size: 20px;
+    font-family: helvetica; }
+
+/****************************
+ LOCALS
+*****************************/
+#locals .row {
+  margin-bottom: 40px; }
+
+/****************************
+	FORM
+*****************************/
+#tickets .pricing {
+  margin: 50px 0;
+  height: 350px;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  text-align: left; }
+  #tickets .pricing h5 {
+    color: #e30000; }
+
+#success_message {
+  display: none; }
+
+/****************************
+	CONTACT
+*****************************/
+#mapBig .frame, #mapBig #gmap_canvas {
+  width: 500px;
+  height: 400px; }
+
+/****************************
+	FOOTER
+*****************************/
+#footer {
+  height: auto; }
+  #footer a {
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    color: #ff0000;
+    font-weight: bold;
+    border-radius: 5px; }
+    #footer a:hover {
+      color: white;
+      text-decoration: none;
+      background: #1a1a1a;
+      transition: 300ms; }
+  #footer p {
+    padding: 10px;
+    color: white;
+    float: right; }
+
+@media screen and (max-width: 1340px) {
+  #tickets .pricing {
+    border-color: transparent; }
+    #tickets .pricing:first-child {
+      border: none; }
+    #tickets .pricing hr {
+      display: none; } }
+@media screen and (max-width: 960px) {
+  	/****************************
+  	EVENTS
+  *****************************/
+  .table tbody tr td,
+  .table tbody tr th {
+    font-size: 14px;
+    font-color: green; }
+
+  	/****************************
+  	PRICING
+  *****************************/
+  #tickets .pricing {
+    border-color: transparent; }
+    #tickets .pricing:first-child {
+      border: none; }
+    #tickets .pricing hr {
+      display: none; }
+
+  	/****************************
+  	CONTACT
+  *****************************/
+  #mapBig .frame,
+  #mapBig #gm3ap_canvas {
+    width: 100%;
+    height: 60vw; } }
+@media screen and (max-width: 640px) {
+  	/****************************
+  	SPLASH
+  *****************************/
+  #splash p {
+    font-size: 60px;
+    color: green; }
+
+  	/****************************
+  	HEADER
+  *****************************/
+  #header {
+    height: 140px; }
+    #header img {
+      height: 90px; }
+    #header h1 {
+      font-size: 30px; }
+
+  #footer p {
+    font-size: 15px; } }
+
+/*# sourceMappingURL=SASS.css.map */

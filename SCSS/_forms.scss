@@ -1,0 +1,249 @@
+
+/**********************
+    OVERALL
+**********************/
+#ticketButtons{
+	font-size:30px;
+	
+}
+
+h4{
+	display:block;
+	float:left;
+	font-weight:bold;
+	width:50%;
+	padding: 10px 0;
+	text-align: center;
+	cursor: pointer;
+	color:$color2;	
+	text-shadow: 0 0 1px black;	
+		box-shadow: 0 0 20px 2px black inset;
+	&:hover{
+		box-shadow: 0 0 50px 10px black inset;
+		transition:300ms;
+	}
+}
+
+h5{
+	color:black;
+}
+
+
+#gButton{
+	border-top-left-radius:30px;
+	border-bottom-left-radius:30px;
+	background:black;
+}
+
+#sButton{
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+	background-color:#676767;
+}
+
+#register{
+	clear:both;
+	width:500px;
+	margin:0 auto;
+	background:transparent;
+}
+
+#form1{
+	display:block;
+}
+
+#form2{
+	display:none;
+}
+
+#wholeForm {	
+	margin:100px 0;
+	border-radius: 20px;
+	border:1px solid $color2;
+	background: rgb(39, 39, 39);
+	box-shadow: 0 5px 10px -2px black;
+	padding: 20px;
+	h3{
+		margin-top:0px;
+	}
+	textarea{
+		width:100%;
+		max-width: 100%;
+		height:80px;
+		color:black;
+		font-family: helvetica;
+	}
+	#checkbox{
+		width:100%;
+	}
+}
+
+/**********************
+    LABELS/INPUTS
+**********************/
+
+/*set all elements inside the formbox to be relative to it*/
+.formbox{
+	position:relative;
+	margin-bottom:20px;
+}
+
+label,
+input,
+select,
+option,
+span{
+	margin: 5px 0 0 0;
+	font-family: mate;
+	font-size:20px;
+	width: 300px;
+	padding:3px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border:none;
+	transition:300ms;	
+	border:1px solid transparent;
+	color:black;
+}
+
+.labels{
+	font-family: chunk;
+	color:white;
+}
+
+.options{
+    height:20px
+}
+
+span{
+	color:$color3;
+}
+
+/*focus state gives the inputs a nice green look*/
+input:focus, select:focus{
+	background:#acffff;
+	width:320px;
+	transition:300ms;		
+	border:1px solid #001dff;
+}
+
+input[type="radio"], input[type="checkbox"]{
+	width:30px;
+	margin-right:5px;
+	display:inline-block;
+}
+
+.chunks{
+margin:20px 0;
+}
+
+#sexy, #stalk{
+	height:40px;
+}
+
+input{
+	font-size:18px;
+}
+
+#radio{
+	margin-bottom:20px;
+}
+
+
+
+/**********************
+    SUBMIT
+**********************/
+
+input[type=submit]{
+	display:block;
+	border-radius:20px;
+	background:$color1;
+	color:white;
+	width:90px;
+	height:40px;
+	font-size:18px;
+	margin:15px auto 0;
+}
+
+/*widen the submit button during hover*/
+input[type=submit]:hover{
+	width:110px;
+	box-shadow: 0 0 10px 2px white;
+	transition:200ms;
+}
+
+/*pretty light green active state*/
+input[type=submit]:active{
+	transition:50ms;
+	box-shadow:0 0 20px 5px black inset, 0 0 10px white;
+	border:none;
+}
+
+/**********************
+    MESSAGE
+**********************/
+/*negative message appears below the input field*/
+.message{
+	position:absolute;	
+	left:45%;	
+	color:#ffaaaa;
+	font-family:  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:14px;	
+	display:none;
+}
+
+/*positive message appears beside the input. hapy and green*/
+.message2{
+	position:absolute;	
+	top:0;
+	left:95%;
+	margin-left:10px;
+	background-color:transparent;
+	font-size:10px;
+	font-family:"kingthings_calligraphica_2Rg", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:30px;	
+	color:#00ff00;
+	display:none;
+}
+
+#checkMessage{
+	top:120px;
+	left:5%;
+}
+
+
+/*******************
+    Media Queries
+*******************/
+
+
+/*somewhat started media queries*/
+@media screen and (max-width:960px) {
+	#wholeForm{
+		margin-top:100px;
+		input, select{
+			width:100%;
+		}
+		input[type="text"], input[type="email"], input[type="tel"]{
+			width:100%;
+		}
+		#checkMessage{
+			top:150px;
+		}
+		input[type="radio"], input[type="checkbox"]{
+			width:30px;
+		}
+		input[type="submit"]{
+			width:70%;
+		}
+		
+	}
+
+
+}
+
+@media screen and (max-width:640px) {
+
+}
+	
