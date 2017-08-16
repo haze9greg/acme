@@ -198,6 +198,11 @@ input {
 #radio {
   margin-bottom: 20px; }
 
+ul{
+	list-style: circle;
+	font-family: helvetica;
+	font-size: 20px;
+}
 /**********************
     SUBMIT
 **********************/

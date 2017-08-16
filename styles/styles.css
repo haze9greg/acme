@@ -6083,5 +6083,7 @@ body {
 /***********************
  STYLES
 ***********************/
-
+ul{
+	list-style: circle;
+}
 /*# sourceMappingURL=styles.css.map */
